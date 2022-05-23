@@ -1,0 +1,27 @@
+<div class="cart row">
+    <div class="col-">
+        <h3 class="text-center mt-4 pb-4">Carrito</h3>
+        
+        <div *ngFor="let cart of cart">
+            <h5 class="text-center">{{cart.eventInfo.title}}</h5>
+            <div class="p-2" *ngFor="let session of cart.sessions; let i = index">
+                <div class="row">
+                    <div class="col-10 date">
+                        <span>{{session.date | date: 'dd/MM/yyyy'}}</span>
+                    </div>
+                    <div class="col-1">
+                        <span>x{{session.quantity}}</span>
+                    </div>
+
+                    <div class="col-1">
+                        <a [routerLink]="" (click)="deleteFromCart(cart, session.date)">
+                            <img class="image" src="././././assets/img/trash.png">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

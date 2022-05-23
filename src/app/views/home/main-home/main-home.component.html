@@ -1,0 +1,16 @@
+
+<div *ngIf="eventList.length > 0 else notFoundEvents">
+    <div class="main">
+        <div class="basic-grid">
+            <div *ngFor="let event of eventList">
+                <app-event-card [eventDetail]="event"></app-event-card>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #notFoundEvents>
+    <div class="">
+        <p>No hay eventos disponibles.</p>
+    </div>
+</ng-template>

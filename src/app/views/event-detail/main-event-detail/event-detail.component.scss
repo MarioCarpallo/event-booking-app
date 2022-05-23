@@ -1,0 +1,72 @@
+.notFoundMessage{
+    width: 200px;
+    margin-top: 2rem;
+    text-align: center;
+    background-color: #353535;
+    border-radius: 8px;
+    z-index: 1;
+    color: #b2becd;
+}
+
+button {
+    display: flex;
+    height: 3em;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee4b;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+   }
+   
+   button > .arrow {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+   }
+   
+   button:hover > .arrow {
+    font-size: 1.2em;
+    transform: translateX(-5px);
+   }
+   
+   button:hover {
+    transform: translateY(-2px);
+   }
+
+.button_div{
+    margin-top: 7rem !important;
+    margin-left: 2rem;
+}
+
+.main{
+    color: #b2becd;
+}
+
+.sessions{
+    background-color: #353535;
+    border-radius: 8px;
+    z-index: 1;
+    margin-left: 3rem;
+    width: 450px;
+}
+
+a{
+    color: #b2becd;
+}
+
+.sessionList{
+    padding-right: 2rem;
+}
+
+
+.disabled{
+    color: #ccc;
+    pointer-events: none;
+    cursor: default;
+}

@@ -1,0 +1,14 @@
+  <div class="card-style">
+    <a [routerLink]="" (click)="lookEvent()">
+    <div class="card-content">
+      <h5>{{eventDetail.title}}</h5>
+      <h6>{{eventDetail.subtitle}}</h6>  
+    </div>
+    <img [src]='imageUrl' class="image" alt="Event Session">
+  </a>
+      <div class="card-content">
+        <h5 class="card-date">{{startDate}} - {{endDate}}</h5>
+        <p class="card-desc" [innerHTML]="eventDetail.description"></p>
+        <a [routerLink]="" (click)="lookEvent()" class="event-button">Comprar</a>
+      </div>
+  </div>

@@ -1,0 +1,51 @@
+<div class="button_div">
+    <button  (click)="backButton()">
+        <span class="arrow">🡐</span>
+        <span>Volver</span>
+      </button>
+</div>
+
+<div class="container" *ngIf="emptySessions == false else notFound">
+    <!--Section: Content-->
+    <section class="text-center" *ngIf="eventSessions != null else notFound">
+      <div class="row main">
+        <div class="col-lg-6 mb-4">
+          <div class="sessions">
+            <h4 class="text-center mt-4 pb-4 pt-4">Sesiones:</h4>
+            <div class="sessionList">
+                <div class="row pb-4"  *ngFor="let session of eventSessions.sessions; let i = index">
+                    <div class="col-md-9 col-9">
+                        <span>Fecha: {{session.date | date: 'dd/MM/yyyy' }}, Disponibilidad: {{session.availability}}</span>
+                    </div>
+                    <div class="col-md-1 col-1">
+                        <a [ngClass]="{'disabled': !cartQuantity[i] != 0}" [routerLink]="" (click)="deleteFromList(session.date, i)">-</a>
+                    </div>
+                    <div class="col-md-1 col-1">
+                        <span>{{cartQuantity[i]}}</span>
+                    </div>
+                    <div class="col-md-1 col-1">
+                        <a [ngClass]="{'disabled': eventSessions.sessions[i].availability == 0}" [routerLink]="" (click)="addToCart(session.date, i)">+</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mt-4">
+            <app-cart [cart]="cart" (deleteFromCartEvt)="deleteFromCart($event)"></app-cart>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+
+<ng-template #notFound>
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <span class="notFoundMessage p-3">EVENT INFO NOT FOUND</span>
+            </div>
+        </div>
+    </div>
+</ng-template>

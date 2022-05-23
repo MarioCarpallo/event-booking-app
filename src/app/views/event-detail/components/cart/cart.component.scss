@@ -1,0 +1,27 @@
+.cart{
+    background-color: #353535;
+    border-radius: 8px;
+    z-index: 1;
+    margin-left: 3rem;
+    width: 450px;
+    min-height: 300px;
+}
+
+a{
+    color: #b2becd
+}
+
+.date{
+    text-align: left !important;
+}
+
+.image{
+    max-width: 120%;
+    filter: invert(100%);
+    transition: all 500ms;
+}
+
+.image:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-3px) scale(1.03);
+}

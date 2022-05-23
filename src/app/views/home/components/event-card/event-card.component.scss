@@ -1,0 +1,99 @@
+.card_style {
+    background: #2a2e35;
+    color: #b2becd;
+    padding: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.38);
+    display: inline-flex;
+    flex-direction: column;
+    margin: 0 0 1em;
+    width: 100%;
+    transform: translateY(0);
+    border-radius: 0.25em;
+}
+
+.card-event {
+    max-width: 650px;
+    overflow: hidden;
+    font-weight: 300;
+}
+
+.card-event:hover {
+    transition: transform .3s;
+    transform:translateY(-3px)
+}
+
+
+
+
+.card-desc {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-left: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-left: 0.75em !important;
+
+}
+
+.event-button{
+        display: inline-block;
+        border-radius: 3px;
+        padding: 0.2em 0.5em 0.3em;
+        border-radius: 2px;
+        background: #454e56;
+        color: #b2becd;
+        font-weight: 600;
+        margin: 0.25em 0.1em;
+        margin-top: 0.25em;
+        margin-right: 0.1em;
+        margin-bottom: 0.25em;
+        margin-left: 0.3em;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color: #b2becd;
+}
+
+
+.card-style {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: #353535;
+        font-size: 1rem;
+        color: #fff;
+        box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+        max-width: 750px;
+        border-radius: 4px;
+        transition: all 500ms;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+     }
+
+.card-date{
+    padding-left: 0.5em !important;
+}
+    
+.card-test:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-3px) scale(1.03);
+}
+
+.card-content {
+    padding: 1em;
+}
+
+
+.image{
+    min-height: 330px;
+}
+
+@media (max-width: 1516px) {
+    .card-desc{
+        display: none 
+    }
+}
